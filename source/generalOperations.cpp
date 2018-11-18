@@ -1,5 +1,7 @@
 #include "header.h"
 
+/*	Utility function to convert character to integer
+*/
 int to_int(char ch)
 {
 	static map<char, int> lookup;
@@ -13,6 +15,8 @@ int to_int(char ch)
 	return lookup[ch];
 }
 
+/*	Utility function to convert integer to character
+*/
 char to_char(int num)
 {
 	static map<int, char> lookup;
@@ -26,6 +30,8 @@ char to_char(int num)
 	return lookup[num];
 }
 
+/*	Utility function to convert binary to hexadecimal
+*/
 string to_hex(string bin)
 {
 	string hex = "";
@@ -42,6 +48,8 @@ string to_hex(string bin)
 	return hex;
 }
 
+/*	Utility function to convert hexadecimal to binary
+*/
 string to_bin(string hex)
 {
 	string bin = "";
@@ -63,6 +71,8 @@ string to_bin(string hex)
 	return bin;
 }
 
+/*	Utility function to add two hexadecimal numbers and set respective flags
+*/
 string addition(string hex1, string hex2, bool &AC, bool &CF)
 {
 	int carry = 0;
@@ -87,6 +97,8 @@ string addition(string hex1, string hex2, bool &AC, bool &CF)
 	return sum;
 }
 
+/*	Utility function to get complement to hexadecimal number
+*/
 string complement(string hex)
 {
 	string comp = "";
@@ -95,6 +107,8 @@ string complement(string hex)
 	return comp;
 }
 
+/*	Utility function to subtract two hexadecimal numbers and set respective flags
+*/
 string subtraction(string hex1, string hex2, bool &AC, bool &CF, bool sixteen)
 {
 	bool tmp;
@@ -103,34 +117,8 @@ string subtraction(string hex1, string hex2, bool &AC, bool &CF, bool sixteen)
 	return (addition(hex1, addition(complement(hex2), "01", tmp, tmp), AC, CF));
 }
 
-string setFlags(string hex, bool AC, bool CF)
-{
-	string bin = "00000000";
-	if((hex[0] >= '8' && hex[0] <= '9') || (hex[0] >= 'A' && hex[0] <= 'F'))
-		bin[0] = '1';
-	if(hex.compare("00") == 0)
-		bin[1] = '1';
-	bin[3] = AC?'1':'0';
-	for(int i = 0; i < 2; ++i)
-	{
-		switch(hex[i])
-		{
-			case '1':
-			case '7':
-			case '8':
-			case 'B':
-			case 'D':
-			case 'E':
-				if(bin[5] == '0')
-					bin[5] = '1';
-				else if(bin[5] == '1')
-					bin[5] = '0';
-		}
-	}
-	bin[7] = CF?'1':'0';
-	return to_hex(bin);
-}
-
+/*	Utility function to perform logical AND on two hexadecimal numbers
+*/
 string logicand(string hex1, string hex2)
 {
 	string bin1 = to_bin(hex1), bin2 = to_bin(hex2), res = "";
@@ -142,6 +130,8 @@ string logicand(string hex1, string hex2)
 	return to_hex(res);
 }
 
+/*	Utility function to perform logical OR on two hexadecimal numbers
+*/
 string logicor(string hex1, string hex2)
 {
 	string bin1 = to_bin(hex1), bin2 = to_bin(hex2), res = "";
@@ -153,6 +143,8 @@ string logicor(string hex1, string hex2)
 	return to_hex(res);
 }
 
+/*	Utility function to perform logical XOR on two hexadecimal numbers
+*/
 string logicxor(string hex1, string hex2)
 {
 	string bin1 = to_bin(hex1), bin2 = to_bin(hex2), res = "";
@@ -162,4 +154,47 @@ string logicxor(string hex1, string hex2)
 		else
 			res += '0';
 	return to_hex(res);
+}
+
+/*	Function to set 8085 flags
+*/
+string setFlags(string hex, bool AC, bool CF)
+{
+	string bin = "00000000";
+
+	//	Sign flag
+	if((hex[0] >= '8' && hex[0] <= '9') || (hex[0] >= 'A' && hex[0] <= 'F'))
+		bin[0] = '1';
+
+	//	Zero flag
+	if(hex.compare("00") == 0)
+		bin[1] = '1';
+
+	//	Auxilary carry flag
+	bin[3] = AC?'1':'0';
+
+	//	Parity flag
+	for(int i = 0; i < 2; ++i)
+	{
+		switch(hex[i])
+		{
+			case '1':
+			case '2':
+			case '4':
+			case '7':
+			case '8':
+			case 'B':
+			case 'D':
+			case 'E':
+				if(bin[5] == '0')
+					bin[5] = '1';
+				else if(bin[5] == '1')
+					bin[5] = '0';
+		}
+	}
+
+	//	Carry flag
+	bin[7] = CF?'1':'0';
+
+	return to_hex(bin);
 }
