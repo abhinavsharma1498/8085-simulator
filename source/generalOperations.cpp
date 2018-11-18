@@ -71,6 +71,18 @@ string to_bin(string hex)
 	return bin;
 }
 
+/*	Utility function to convert string to upper case
+*/
+string convert_upper(string str)
+{
+	for(int i = 0; i < str.length(); ++i)
+	{
+		if(str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 'a' - 'A';
+	}
+	return str;
+}
+
 /*	Utility function to add two hexadecimal numbers and set respective flags
 */
 string addition(string hex1, string hex2, bool &AC, bool &CF)
