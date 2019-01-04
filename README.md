@@ -33,22 +33,22 @@ Building the project:
 Running the program:
 1. Open terminal and goto the project directory using cd command.
 2. Now run the program using either of the following instructions:
-   i. ./8085 (To run the program while typing the program)
-  ii. ./8085 /home/...path to assembly program (To run the program using program on the disk)
- iii. ./8085 --debugger (To ru program while typing it in debugger mode)
-  iv. ./8085 /home/...path to assembly program --debugger (To run a program on difk in debugger mode)
+   ./8085 (To run the program while typing the program)
+   ./8085 /home/...path to assembly program (To run the program using program on the disk)
+   ./8085 --debugger (To ru program while typing it in debugger mode)
+   ./8085 /home/...path to assembly program --debugger (To run a program on difk in debugger mode)
 
 # Example code available
-greater.asm -> Take two values from user (at 2050 and 2051) and store the larger value at 3050.
-smaller.asm -> Take two values from user (at 2050 and 2051) and store the smaller value at 3050.
-negative.asm -> Take value from user (at 2050) and store its negative at 3050.
-sum.asm -> Take four values from user (2050, 2051, 2052, 2053) and store their sum at 3050.
-sum16.asm -> Take two 16 bit values from user (2051, 2050) and store their sum at (3051, 3050).
+1. greater.asm -> Take two values from user (at 2050 and 2051) and store the larger value at 3050.
+2. smaller.asm -> Take two values from user (at 2050 and 2051) and store the smaller value at 3050.
+3. negative.asm -> Take value from user (at 2050) and store its negative at 3050.
+4. sum.asm -> Take four values from user (2050, 2051, 2052, 2053) and store their sum at 3050.
+5. sum16.asm -> Take two 16 bit values from user (2051, 2050) and store their sum at (3051, 3050).
 
 # Contribute
 Ways to contribute to this project:
-  i. Add sub routine instructions.
- ii. Solve problem with debugger (It runs properly but exits with segmentation fault).
+1. Add sub routine instructions.
+2. Solve problem with debugger (It runs properly but exits with segmentation fault).
 
 # Credits
 Akshay Rajput sir -> For inspiring us with the idea.
