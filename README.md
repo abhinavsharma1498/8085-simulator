@@ -32,7 +32,7 @@ Building the project:
 # How to use
 Running the program:
 1. Open terminal and goto the project directory using cd command.
-2. Now run the program using either of the following instructions:
+2. Now run the program using either of the following instructions:  
    ./8085 (To run the program while typing the program)  
    ./8085 /home/...path to assembly program (To run the program using program on the disk)  
    ./8085 --debugger (To ru program while typing it in debugger mode)  
