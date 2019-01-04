@@ -54,6 +54,6 @@ Ways to contribute to this project:
 Akshay Rajput sir -> For inspiring us with the idea.  
 Hemant Pokheriya sir -> For teaching us the 8085 instruction set.  
 
-# Project contrinuters
+# Project contributers
 Abhinav Sharma  
 Rohan Deoli
