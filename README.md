@@ -33,10 +33,10 @@ Building the project:
 Running the program:
 1. Open terminal and goto the project directory using cd command.
 2. Now run the program using either of the following instructions:
-   > ./8085 (To run the program while typing the program)
-   > ./8085 /home/...path to assembly program (To run the program using program on the disk)
-   > ./8085 --debugger (To ru program while typing it in debugger mode)
-   > ./8085 /home/...path to assembly program --debugger (To run a program on difk in debugger mode)
+   i. ./8085 (To run the program while typing the program)
+  ii. ./8085 /home/...path to assembly program (To run the program using program on the disk)
+ iii. ./8085 --debugger (To ru program while typing it in debugger mode)
+  iv. ./8085 /home/...path to assembly program --debugger (To run a program on difk in debugger mode)
 
 # Example code available
 greater.asm -> Take two values from user (at 2050 and 2051) and store the larger value at 3050.
@@ -47,8 +47,8 @@ sum16.asm -> Take two 16 bit values from user (2051, 2050) and store their sum a
 
 # Contribute
 Ways to contribute to this project:
-  > Add sub routine instructions.
-  > Solve problem with debugger (It runs properly but exits with segmentation fault).
+  i. Add sub routine instructions.
+ ii. Solve problem with debugger (It runs properly but exits with segmentation fault).
 
 # Credits
 Akshay Rajput sir -> For inspiring us with the idea.
