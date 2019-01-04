@@ -33,10 +33,10 @@ Building the project:
 Running the program:
 1. Open terminal and goto the project directory using cd command.
 2. Now run the program using either of the following instructions:
-   ./8085 (To run the program while typing the program)
-   ./8085 /home/...path to assembly program (To run the program using program on the disk)
-   ./8085 --debugger (To ru program while typing it in debugger mode)
-   ./8085 /home/...path to assembly program --debugger (To run a program on difk in debugger mode)
+   ./8085 (To run the program while typing the program)  
+   ./8085 /home/...path to assembly program (To run the program using program on the disk)  
+   ./8085 --debugger (To ru program while typing it in debugger mode)  
+   ./8085 /home/...path to assembly program --debugger (To run a program on difk in debugger mode)  
 
 # Example code available
 1. greater.asm -> Take two values from user (at 2050 and 2051) and store the larger value at 3050.
@@ -51,9 +51,9 @@ Ways to contribute to this project:
 2. Solve problem with debugger (It runs properly but exits with segmentation fault).
 
 # Credits
-Akshay Rajput sir -> For inspiring us with the idea.
-Hemant Pokheriya sir -> For teaching us the 8085 instruction set.
+Akshay Rajput sir -> For inspiring us with the idea.  
+Hemant Pokheriya sir -> For teaching us the 8085 instruction set.  
 
 # Project contrinuters
-Abhinav Sharma
+Abhinav Sharma  
 Rohan Deoli
