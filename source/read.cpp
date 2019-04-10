@@ -91,7 +91,7 @@ param *add_to_memory(param *para, string cmd, string &pc)
 	return para;
 }
 
-string convert_upper(string str)
+/*string convert_upper(string str)
 {
 	for(int i = 0; i < str.length(); ++i)
 	{
@@ -99,7 +99,7 @@ string convert_upper(string str)
 			str[i] -= 'a' - 'A';
 	}
 	return str;
-}
+}*/
 
 bool readCmds(param *para, istream& in, bool file)
 {
